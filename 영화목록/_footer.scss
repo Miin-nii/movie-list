@@ -1,0 +1,78 @@
+footer {
+    width: 100%;
+    background: #F2F2F2;
+    overflow: hidden;
+    .cont-sns {
+        width: 1189px;
+        border-bottom: 1px solid #C4C4C4;
+        margin: 0 auto;
+        padding: 53px 0 42px;
+        overflow: hidden;
+        .companyName {
+            float: left;
+            font-family: $font-main;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000;
+        }
+        .list-sns {
+            float: right;
+            display: flex;
+            column-gap: 23px;
+            li {
+                .link-sns{
+                    .img-sns {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .cont-companyInfo {
+        width: 1189px;
+        margin: 0 auto;
+        padding: 36px 0 38px;
+        box-sizing: border-box;
+        overflow: hidden;
+        .list-companyInfo {
+            float: left;
+            display: flex;
+            .cont-infoList {
+                display: flex;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 16px;
+                    background-color: #4F4F4F;
+                    // margin-top: 4px;
+                    margin: 4px 11px 0 11px;
+                }
+                &:last-child::after {
+                    display: none;
+                }
+                dt{
+                    @include font-companyInfo;
+                    font-weight: 700;
+                    margin-right: 6px;
+                }
+                dd {
+                    @include font-companyInfo;
+                    font-weight: 400;
+                    
+                }
+                .companyInfo-bold {
+                    font-weight: 700;
+                }
+            }
+        }
+        .copyright {
+            float: right;
+            @include font-companyInfo;
+            font-weight: 700;
+        }
+    }
+}
